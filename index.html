@@ -4,7 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#08090d">
-<title>SAMIR. | Think • Learn • Create</title>
+<meta name="description" content="Explore the personal portfolio of Samir Ganie — a curious learner interested in technology, psychology, programming, and digital creativity. Discover his skills, projects, education, and learning journey.">
+<title>Samir Ganie | Personal Portfolio & Digital Journey</title>
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 
@@ -335,16 +341,70 @@ font-size:11px;
 color:var(--muted);
 margin-top:7px;
 }
+.menu-toggle {
+    display: none;
+    position: relative;
+    background: linear-gradient(135deg, #071b22, #101323, #071b22);
+    border: 1px solid #00f5ff;
+    color: #00f5ff;
 
-.menu-toggle{
-display:none;
-background:#17141a;
-border:1px solid var(--border);
-color:var(--red);
-padding:9px 12px;
-border-radius:5px;
-cursor:pointer;
+    padding: 14px 20px;
+    min-width: 55px;
+    min-height: 48px;
+
+    border-radius: 8px;
+    cursor: pointer;
+
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    box-shadow:
+        0 0 8px rgba(0, 245, 255, 0.35),
+        inset 0 0 12px rgba(0, 245, 255, 0.08);
+
+    transition: all 0.35s ease;
+    animation: hackerGlow 3s infinite alternate;
 }
+
+.menu-toggle:hover {
+    color: #00ff88;
+    border-color: #00ff88;
+
+    background: linear-gradient(135deg, #071f19, #101323);
+
+    box-shadow:
+        0 0 12px rgba(0, 255, 136, 0.6),
+        0 0 25px rgba(0, 255, 136, 0.25);
+
+    transform: scale(1.06);
+}
+
+.menu-toggle:active {
+    transform: scale(0.95);
+}
+
+@keyframes hackerGlow {
+    0% {
+        border-color: #00f5ff;
+        color: #00f5ff;
+        box-shadow: 0 0 8px #00f5ff55;
+    }
+
+    50% {
+        border-color: #00ff88;
+        color: #00ff88;
+        box-shadow: 0 0 14px #00ff8855;
+    }
+
+    100% {
+        border-color: #a855f7;
+        color: #a855f7;
+        box-shadow: 0 0 14px #a855f755;
+    }
+}
+
 
 .section{display:none;animation:fade .35s ease}
 .section.active{display:block}
@@ -1133,7 +1193,29 @@ padding:20px 16px;
     box-shadow: 0 0 15px rgba(255,0,60,.9), 0 0 35px rgba(255,0,60,.6);
   }
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 0;
+}
 
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+#home {
+  scroll-margin-top: 0;
+}
+.avatar {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: auto auto 13px;
+  border: 2px solid #39ff14;
+  box-shadow: 0 0 15px rgba(57,255,20,0.4);
+}
 </style>
 </head>
 
@@ -1189,7 +1271,7 @@ I UNDERSTAND — ENTER SYSTEM →
 </div>
 
 <div class="profile">
-<div class="avatar">SG</div>
+<img class="avatar" src="profile.png" alt="Samir Ganie">
 <h3>Samir Ganie</h3>
 <p>Personal Digital Space</p>
 <div class="online">● SYSTEM ACTIVE</div>
@@ -1892,6 +1974,10 @@ function closeMenu(){
 }
 
 </script>
-
+<script>
+window.addEventListener("load", function () {
+  window.scrollTo(0, 0);
+});
+</script>
 </body>
 </html>
