@@ -1,0 +1,1983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08090d">
+<meta name="description" content="Explore the personal portfolio of Samir Ganie — a curious learner interested in technology, psychology, programming, and digital creativity. Discover his skills, projects, education, and learning journey.">
+<title>Samir Ganie | Personal Portfolio & Digital Journey</title>
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+--bg:#08090d;
+--panel:#101218;
+--panel2:#151820;
+--red:#ff303b;
+--red2:#b90019;
+--white:#f4f4f7;
+--muted:#9297a5;
+--border:rgba(255,48,59,.19);
+}
+
+body{
+background:var(--bg);
+color:var(--white);
+font-family:Arial,sans-serif;
+min-height:100vh;
+overflow-x:hidden;
+}
+
+button{font:inherit}
+a{color:inherit}
+
+/* BACKGROUND EFFECT */
+
+body:before{
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+z-index:-1;
+background:
+radial-gradient(ellipse at 85% 5%,rgba(255,30,50,.09),transparent 35%),
+radial-gradient(ellipse at 5% 90%,rgba(255,30,50,.05),transparent 35%);
+}
+
+::selection{background:var(--red);color:white}
+
+/* SECURITY ALERT */
+
+.security{
+position:fixed;
+inset:0;
+z-index:9999;
+background:rgba(3,4,8,.97);
+display:flex;
+align-items:center;
+justify-content:center;
+padding:18px;
+}
+
+.security-box{
+width:100%;
+max-width:490px;
+background:#100b0e;
+border:1px solid var(--red);
+border-radius:12px;
+padding:27px;
+box-shadow:0 0 45px rgba(255,0,30,.2);
+animation:alertIn .5s ease;
+}
+
+@keyframes alertIn{
+from{opacity:0;transform:scale(.92)}
+to{opacity:1;transform:scale(1)}
+}
+
+.alert-top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid rgba(255,48,59,.3);
+padding-bottom:17px;
+margin-bottom:23px;
+font-size:10px;
+letter-spacing:2px;
+color:var(--red);
+}
+
+.blink{
+animation:blink 1s infinite;
+}
+
+@keyframes blink{
+50%{opacity:.2}
+}
+
+.alert-icon{
+width:58px;
+height:58px;
+border:1px solid var(--red);
+border-radius:50%;
+display:grid;
+place-items:center;
+font-size:29px;
+color:var(--red);
+margin-bottom:19px;
+box-shadow:0 0 22px rgba(255,0,30,.2);
+}
+
+.security-box h1{
+font-size:27px;
+color:#ff3545;
+letter-spacing:2px;
+margin-bottom:9px;
+}
+
+.security-box h2{
+font-size:15px;
+margin-bottom:17px;
+}
+
+.security-box p{
+color:#b7b1b6;
+font-size:13px;
+line-height:1.8;
+margin-bottom:13px;
+}
+
+.alert-warning{
+background:rgba(255,30,50,.08);
+border:1px solid rgba(255,48,59,.35);
+border-left:3px solid var(--red);
+padding:14px;
+color:#ffb8bf;
+font-size:12px;
+line-height:1.8;
+margin:20px 0;
+}
+
+.alert-status{
+font-size:10px;
+color:#ff505c;
+letter-spacing:1px;
+margin-bottom:20px;
+}
+
+.enter-btn{
+width:100%;
+background:var(--red);
+border:none;
+padding:14px;
+color:white;
+font-weight:bold;
+letter-spacing:1px;
+border-radius:5px;
+cursor:pointer;
+transition:.3s;
+}
+
+.enter-btn:hover{
+background:#e00020;
+box-shadow:0 0 20px rgba(255,30,50,.4);
+}
+
+/* SIDEBAR */
+
+.sidebar{
+position:fixed;
+top:0;
+left:0;
+height:100vh;
+width:260px;
+padding:27px 18px;
+background:#0c0e14;
+border-right:1px solid var(--border);
+z-index:100;
+overflow-y:auto;
+transition:transform .3s ease;
+}
+
+.brand{
+font-size:23px;
+font-weight:800;
+letter-spacing:2px;
+color:white;
+padding:5px 8px;
+}
+
+.brand span{color:var(--red)}
+
+.brand small{
+display:block;
+font-size:9px;
+letter-spacing:3px;
+color:var(--muted);
+margin-top:8px;
+font-weight:normal;
+}
+
+.profile{
+margin:30px 3px 26px;
+padding:20px 12px;
+background:linear-gradient(145deg,#19151a,#101218);
+border:1px solid var(--border);
+border-radius:10px;
+text-align:center;
+}
+
+.avatar{
+width:75px;
+height:75px;
+margin:auto auto 13px;
+border-radius:50%;
+display:grid;
+place-items:center;
+background:#251014;
+border:2px solid var(--red);
+color:white;
+font-size:25px;
+font-weight:bold;
+box-shadow:0 0 20px rgba(255,48,59,.15);
+}
+
+.profile h3{font-size:16px}
+.profile p{
+color:var(--muted);
+font-size:11px;
+margin-top:7px;
+}
+
+.profile .online{
+color:#ff6069;
+font-size:10px;
+margin-top:12px;
+letter-spacing:1px;
+}
+
+.menu-label{
+color:#676b77;
+font-size:9px;
+letter-spacing:2px;
+padding:12px 10px;
+}
+
+.nav button{
+width:100%;
+background:transparent;
+color:#a5a6af;
+border:none;
+text-align:left;
+padding:14px 13px;
+margin-bottom:5px;
+border-radius:6px;
+cursor:pointer;
+font-size:13px;
+transition:.2s;
+}
+
+.nav button:hover,
+.nav button.active{
+background:rgba(255,48,59,.09);
+color:#ff5862;
+border-left:3px solid var(--red);
+}
+
+.sidebar-footer{
+margin:30px 10px;
+padding-top:18px;
+border-top:1px solid var(--border);
+font-size:9px;
+line-height:2;
+color:#646875;
+letter-spacing:1px;
+}
+
+/* OVERLAY FOR MOBILE */
+
+.overlay{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.7);
+z-index:90;
+display:none;
+}
+
+.overlay.show{display:block}
+
+/* MAIN */
+
+.main{
+margin-left:260px;
+min-height:100vh;
+padding:28px 35px;
+}
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding-bottom:22px;
+border-bottom:1px solid var(--border);
+margin-bottom:30px;
+gap:10px;
+}
+
+.top-left{
+display:flex;
+align-items:center;
+gap:13px;
+}
+
+.topbar h2{
+font-size:17px;
+}
+
+.system{
+color:#ff5862;
+font-size:10px;
+letter-spacing:1px;
+}
+
+.system i{
+display:inline-block;
+width:7px;
+height:7px;
+background:#ff3545;
+border-radius:50%;
+margin-right:5px;
+box-shadow:0 0 9px red;
+animation:blink 1s infinite;
+}
+
+.clock{
+font-size:11px;
+color:var(--muted);
+margin-top:7px;
+}
+.menu-toggle {
+    display: none;
+    position: relative;
+    background: linear-gradient(135deg, #071b22, #101323, #071b22);
+    border: 1px solid #00f5ff;
+    color: #00f5ff;
+
+    padding: 14px 20px;
+    min-width: 55px;
+    min-height: 48px;
+
+    border-radius: 8px;
+    cursor: pointer;
+
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    box-shadow:
+        0 0 8px rgba(0, 245, 255, 0.35),
+        inset 0 0 12px rgba(0, 245, 255, 0.08);
+
+    transition: all 0.35s ease;
+    animation: hackerGlow 3s infinite alternate;
+}
+
+.menu-toggle:hover {
+    color: #00ff88;
+    border-color: #00ff88;
+
+    background: linear-gradient(135deg, #071f19, #101323);
+
+    box-shadow:
+        0 0 12px rgba(0, 255, 136, 0.6),
+        0 0 25px rgba(0, 255, 136, 0.25);
+
+    transform: scale(1.06);
+}
+
+.menu-toggle:active {
+    transform: scale(0.95);
+}
+
+@keyframes hackerGlow {
+    0% {
+        border-color: #00f5ff;
+        color: #00f5ff;
+        box-shadow: 0 0 8px #00f5ff55;
+    }
+
+    50% {
+        border-color: #00ff88;
+        color: #00ff88;
+        box-shadow: 0 0 14px #00ff8855;
+    }
+
+    100% {
+        border-color: #a855f7;
+        color: #a855f7;
+        box-shadow: 0 0 14px #a855f755;
+    }
+}
+
+
+.section{display:none;animation:fade .35s ease}
+.section.active{display:block}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(10px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+.eyebrow{
+color:var(--red);
+font-size:10px;
+letter-spacing:3px;
+margin-bottom:15px;
+}
+
+.heading{
+font-size:27px;
+margin-bottom:12px;
+}
+
+.description{
+color:var(--muted);
+font-size:13px;
+line-height:1.8;
+margin-bottom:25px;
+}
+
+/* HERO */
+
+.hero{
+position:relative;
+overflow:hidden;
+background:
+linear-gradient(115deg,rgba(255,30,50,.09),transparent 65%),
+#11131b;
+border:1px solid var(--border);
+border-radius:12px;
+padding:43px 38px;
+margin-bottom:22px;
+}
+
+.hero:after{
+content:"SG";
+position:absolute;
+right:35px;
+top:50%;
+transform:translateY(-50%);
+font-size:clamp(100px,18vw,180px);
+font-weight:900;
+color:rgba(255,48,59,.045);
+pointer-events:none;
+}
+
+.hero h1{
+font-size:clamp(36px,5vw,57px);
+line-height:1.12;
+margin-bottom:19px;
+position:relative;
+z-index:1;
+}
+
+.hero h1 span{color:var(--red)}
+
+.hero p{
+max-width:560px;
+font-size:14px;
+line-height:1.9;
+color:#a3a5b0;
+position:relative;
+z-index:1;
+}
+
+.hero-actions{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:26px;
+position:relative;
+z-index:1;
+}
+
+.btn{
+padding:13px 18px;
+background:var(--red);
+color:white;
+border:1px solid var(--red);
+border-radius:5px;
+font-size:12px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.btn.secondary{
+background:transparent;
+color:var(--red);
+}
+
+.btn:hover{box-shadow:0 0 16px rgba(255,48,59,.25)}
+
+/* CARDS */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:15px;
+margin-bottom:22px;
+}
+
+.card{
+background:var(--panel);
+border:1px solid var(--border);
+border-radius:9px;
+padding:22px;
+transition:.25s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+border-color:var(--red);
+}
+
+.card .number{
+font-size:25px;
+color:var(--red);
+font-weight:bold;
+margin-bottom:13px;
+}
+
+.card h3{
+font-size:14px;
+margin-bottom:9px;
+}
+
+.card p{
+font-size:12px;
+line-height:1.8;
+color:var(--muted);
+}
+
+.info-card{
+background:var(--panel);
+border:1px solid var(--border);
+border-radius:9px;
+padding:23px;
+margin-bottom:16px;
+}
+
+.info-card h3{
+color:#ff5963;
+font-size:15px;
+margin-bottom:12px;
+}
+
+.info-card p{
+font-size:13px;
+line-height:1.9;
+color:#a4a7b2;
+}
+
+.quote{
+font-size:17px!important;
+color:white!important;
+font-style:italic;
+}
+
+.tag{
+display:inline-block;
+padding:9px 12px;
+margin:5px 4px 5px 0;
+font-size:11px;
+color:#ff7b83;
+background:rgba(255,48,59,.07);
+border:1px solid var(--border);
+border-radius:5px;
+}
+
+/* EDUCATION */
+
+.timeline{
+border-left:2px solid var(--red);
+padding-left:24px;
+margin:25px 0;
+}
+
+.timeline-item{
+position:relative;
+padding-bottom:32px;
+}
+
+.timeline-item:before{
+content:"";
+position:absolute;
+left:-30px;
+top:3px;
+width:10px;
+height:10px;
+background:var(--red);
+border-radius:50%;
+box-shadow:0 0 10px rgba(255,48,59,.6);
+}
+
+.timeline-item h3{
+font-size:15px;
+margin-bottom:8px;
+}
+
+.timeline-item p{
+color:var(--muted);
+font-size:13px;
+line-height:1.9;
+}
+
+/* CONTACT */
+
+.contact-link{
+display:block;
+text-decoration:none;
+padding:17px;
+margin:12px 0;
+background:var(--panel);
+border:1px solid var(--border);
+border-radius:7px;
+font-size:13px;
+transition:.2s;
+}
+
+.contact-link:hover{
+border-color:var(--red);
+color:#ff6871;
+}
+
+/* TERMINAL */
+
+.terminal{
+background:#080a0e;
+border:1px solid rgba(255,48,59,.35);
+border-radius:8px;
+padding:20px;
+font-family:monospace;
+font-size:12px;
+line-height:2;
+color:#ff626b;
+overflow-wrap:anywhere;
+}
+
+.terminal .green{color:#78d9a0}
+.terminal .white{color:#e9e9ee}
+
+/* FOOTER */
+
+.footer{
+margin-top:50px;
+padding:23px 5px;
+border-top:1px solid var(--border);
+text-align:center;
+font-size:10px;
+line-height:2;
+letter-spacing:1px;
+color:#696d79;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+.sidebar{
+transform:translateX(-100%);
+width:265px;
+}
+.sidebar.open{transform:translateX(0)}
+.main{
+margin-left:0;
+padding:20px 16px;
+}
+.menu-toggle{display:block}
+.grid{grid-template-columns:1fr}
+.hero{padding:30px 21px}
+.hero h1{font-size:39px}
+.topbar h2{font-size:14px}
+.system{font-size:9px}
+}
+
+/* CONTACT SECTION */
+
+.contact-section {
+  padding: 100px 7%;
+  background: #080808;
+  color: #fff;
+  min-height: 70vh;
+}
+
+.contact-container {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.contact-heading {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.contact-tag {
+  color: #ff3030;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.contact-heading h2 {
+  font-size: clamp(38px, 6vw, 65px);
+  margin: 15px 0;
+  font-weight: 800;
+}
+
+.contact-heading h2 span {
+  color: #ff3030;
+}
+
+.contact-heading p {
+  color: #999;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.contact-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 25px;
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 15px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+.contact-card:hover {
+  transform: translateY(-7px);
+  border-color: #ff3030;
+  box-shadow: 0 10px 35px rgba(255, 48, 48, 0.12);
+}
+
+.contact-icon {
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 48, 48, 0.1);
+  border: 1px solid rgba(255, 48, 48, 0.25);
+  border-radius: 12px;
+  color: #ff3030;
+}
+
+.contact-icon svg {
+  width: 29px;
+  height: 29px;
+}
+
+.whatsapp-card .contact-icon {
+  color: #25D366;
+  background: rgba(37, 211, 102, 0.1);
+  border-color: rgba(37, 211, 102, 0.25);
+}
+
+.contact-info {
+  min-width: 0;
+}
+
+.contact-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #888;
+}
+
+.contact-info h3 {
+  font-size: 21px;
+  margin: 7px 0;
+}
+
+.contact-info p {
+  color: #aaa;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.contact-arrow {
+  margin-left: auto;
+  font-size: 25px;
+  color: #ff3030;
+  transition: 0.3s;
+}
+
+.contact-card:hover .contact-arrow {
+  transform: translate(4px, -4px);
+}
+
+.contact-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 45px;
+  color: #aaa;
+  font-size: 13px;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  background: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #25d366;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 650px) {
+  .contact-section {
+    padding: 75px 6%;
+  }
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    padding: 23px 17px;
+    gap: 14px;
+  }
+
+  .contact-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+  }
+
+  .contact-info h3 {
+    font-size: 18px;
+  }
+
+  .contact-info p {
+    font-size: 12px;
+  }
+}
+
+/* =========================
+   PROJECTS SECTION
+========================= */
+
+.projects-section {
+  padding-bottom: 30px;
+}
+
+.projects-section .description {
+  max-width: 650px;
+}
+
+/* PROJECT CARD */
+
+.project-card {
+  position: relative;
+  background: linear-gradient(145deg, #14151d, #0d0f15);
+  border: 1px solid rgba(255, 48, 59, 0.2);
+  border-radius: 13px;
+  margin: 25px 0;
+  overflow: hidden;
+  transition: .3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 48, 59, .65);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, .3);
+}
+
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 19px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, .06);
+}
+
+.project-number {
+  color: #ff5963;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.project-status {
+  color: #78d9a0;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.project-content {
+  padding: 30px 27px;
+}
+
+.project-symbol {
+  width: 65px;
+  height: 65px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: rgba(255, 48, 59, .12);
+  border: 1px solid rgba(255, 48, 59, .35);
+  color: #ff4652;
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 22px;
+  box-shadow: 0 0 25px rgba(255, 48, 59, .08);
+}
+
+.project-content h3 {
+  color: #fff;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.project-category {
+  display: inline-block;
+  color: #ff6972;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.project-content p {
+  color: #a4a7b2;
+  font-size: 13px;
+  line-height: 2;
+  margin-bottom: 22px;
+}
+
+/* PROJECT TAGS */
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 23px;
+}
+
+.project-tags span {
+  background: rgba(255, 48, 59, .07);
+  border: 1px solid rgba(255, 48, 59, .2);
+  color: #ff9299;
+  border-radius: 5px;
+  padding: 8px 11px;
+  font-size: 10px;
+}
+
+/* PROJECT MOTTO */
+
+.project-motto {
+  padding: 17px;
+  margin: 22px 0;
+  border-left: 3px solid #ff303b;
+  background: rgba(255, 48, 59, .055);
+  color: #f5b1b5;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* PROJECT BUTTON */
+
+.project-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 13px 18px;
+  background: #ff303b;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: .25s;
+}
+
+.project-btn:hover {
+  background: #d90020;
+  box-shadow: 0 0 22px rgba(255, 48, 59, .3);
+}
+
+.project-btn span {
+  font-size: 18px;
+}
+
+/* PORTFOLIO PROJECT */
+
+.portfolio-project {
+  border-color: rgba(255, 255, 255, .12);
+}
+
+.portfolio-project:hover {
+  border-color: #ff5963;
+}
+
+.portfolio-symbol {
+  background: rgba(255, 255, 255, .06);
+  border-color: rgba(255, 255, 255, .2);
+  color: white;
+  font-size: 23px;
+}
+
+/* FUTURE VISION */
+
+.project-vision {
+  margin-top: 35px;
+  padding: 32px 27px;
+  background: linear-gradient(120deg, #171018, #101218);
+  border: 1px solid rgba(255, 48, 59, .25);
+  border-radius: 12px;
+}
+
+.project-vision h3 {
+  font-size: 21px;
+  margin: 13px 0;
+  color: white;
+}
+
+.project-vision p {
+  color: #a4a7b2;
+  font-size: 13px;
+  line-height: 1.9;
+  max-width: 650px;
+}
+
+/* MOBILE */
+
+@media(max-width: 650px) {
+
+  .project-content {
+    padding: 23px 19px;
+  }
+
+  .project-top {
+    padding: 16px 19px;
+  }
+
+  .project-content h3 {
+    font-size: 22px;
+  }
+
+  .project-content p {
+    font-size: 12px;
+    line-height: 1.9;
+  }
+
+  .project-motto {
+    font-size: 13px;
+  }
+
+  .project-btn {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .project-vision {
+    padding: 25px 20px;
+  }
+
+}
+
+/* HACKER STYLE - GREEN SECURITY WARNING */
+
+.alert-warning {
+  background: rgba(0, 255, 100, 0.08);
+  border: 1px solid rgba(0, 255, 100, 0.35);
+  border-left: 4px solid #00ff66;
+  color: #9dffbd;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 13px;
+  line-height: 1.3;
+  border-radius: 4px;
+  box-shadow:
+    0 0 12px rgba(0, 255, 100, 0.08),
+    inset 0 0 15px rgba(0, 255, 100, 0.03);
+}
+
+.alert-warning strong {
+  color: #00ff66;
+  text-shadow: 0 0 8px rgba(0, 255, 100, 0.5);
+}
+.skull-icon {
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 60px;
+  color: #ff003c;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 0, 60, 0.18),
+    rgba(20, 0, 0, 0.95)
+  );
+
+  border: 1px solid #ff003c;
+  border-radius: 14px;
+
+  box-shadow:
+    0 0 8px rgba(255, 0, 60, 0.7),
+    0 0 22px rgba(255, 0, 60, 0.35),
+    inset 0 0 18px rgba(255, 0, 60, 0.12);
+
+  margin-bottom: 20px;
+
+  animation: skullDanger 2s infinite ease-in-out;
+}
+
+@keyframes skullDanger {
+  0%, 100% {
+    box-shadow:
+      0 0 8px rgba(255, 0, 60, 0.5),
+      0 0 18px rgba(255, 0, 60, 0.25),
+      inset 0 0 12px rgba(255, 0, 60, 0.1);
+  }
+
+  50% {
+    box-shadow:
+      0 0 15px rgba(255, 0, 60, 0.9),
+      0 0 35px rgba(255, 0, 60, 0.6),
+      inset 0 0 22px rgba(255, 0, 60, 0.2);
+  }
+}
+.skull-icon {
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 20px auto;
+
+  font-family: "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 60px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 0, 60, 0.18),
+    rgba(20, 0, 0, 0.95)
+  );
+
+  border: 1px solid #ff003c;
+  border-radius: 14px;
+
+  box-shadow:
+    0 0 8px rgba(255, 0, 60, 0.7),
+    0 0 22px rgba(255, 0, 60, 0.35),
+    inset 0 0 18px rgba(255, 0, 60, 0.12);
+
+  animation: skullDanger 2s infinite ease-in-out;
+}
+
+@keyframes skullDanger {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(255,0,60,.5), 0 0 18px rgba(255,0,60,.25);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255,0,60,.9), 0 0 35px rgba(255,0,60,.6);
+  }
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 0;
+}
+
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+#home {
+  scroll-margin-top: 0;
+}
+.avatar {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: auto auto 13px;
+  border: 2px solid #39ff14;
+  box-shadow: 0 0 15px rgba(57,255,20,0.4);
+}
+</style>
+</head>
+
+<body>
+
+<!-- RED SECURITY WARNING -->
+
+<div class="security" id="security">
+<div class="security-box">
+
+<div class="alert-top">
+<span>SECURITY ALERT // 001</span>
+<span class="blink">● CRITICAL NOTICE</span>
+</div>
+
+<div class="alert-icon skull-icon">☠️</div>
+
+<h1>UNAUTHORIZED USE PROHIBITED</h1>
+<h2>PERSONAL INFORMATION WARNING</h2>
+
+<p>
+Welcome to the personal digital identity of Samir.
+Before continuing, please read this important privacy notice.
+</p>
+
+<div class="alert-warning">
+<strong>WARNING:</strong> This website contains personal
+information belonging to Samir. Any unauthorized copying,
+misuse, redistribution or exploitation of this information
+is strictly discouraged. Respect the owner's privacy and
+use this website responsibly.
+</div>
+
+<div class="alert-status">
+[ PRIVACY NOTICE ACTIVE ]<br>
+[ USER ACKNOWLEDGEMENT REQUIRED ]
+</div>
+
+<button class="enter-btn" onclick="enterSite()">
+I UNDERSTAND — ENTER SYSTEM →
+</button>
+
+</div>
+</div>
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar" id="sidebar">
+
+<div class="brand">
+  SAMIR<span>.</span>
+  <small>CURIOUS MIND / ENDLESS POSSIBILITIES</small>
+</div>
+
+<div class="profile">
+<img class="avatar" src="profile.png" alt="Samir Ganie">
+<h3>Samir Ganie</h3>
+<p>Personal Digital Space</p>
+<div class="online">● SYSTEM ACTIVE</div>
+</div>
+
+<div class="menu-label">NAVIGATION MENU</div>
+
+<nav class="nav">
+<button class="active" onclick="showSection('home',this)">⌂ &nbsp; Overview</button>
+<button onclick="showSection('intro',this)">◈ &nbsp; Introduction</button>
+<button onclick="showSection('about',this)">◎ &nbsp; About Me</button>
+<button onclick="showSection('education',this)">▤ &nbsp; Education</button>
+<button onclick="showSection('skills',this)">⌘ &nbsp; Skills</button>
+<button onclick="showSection('projects',this)">▣ &nbsp; Projects</button>
+<button onclick="showSection('contact',this)">✉ &nbsp; Contact</button>
+</nav>
+
+<div class="sidebar-footer">
+DIGITAL IDENTITY: SG-001<br>
+INTERFACE VERSION: 2.0<br>
+© 2026 SAMIR GANIE
+</div>
+
+</aside>
+
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<!-- MAIN CONTENT -->
+
+<main class="main">
+
+<header class="topbar">
+<div class="top-left">
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<h2 id="pageTitle">Overview</h2>
+</div>
+
+<div>
+<div class="system"><i></i> SYSTEM ACTIVE</div>
+<div class="clock" id="clock">Loading...</div>
+</div>
+</header>
+
+<!-- OVERVIEW -->
+
+<section class="section active" id="home">
+
+<div class="hero">
+<div class="eyebrow">PERSONAL DIGITAL IDENTITY / 001</div>
+
+<h1>Beyond Limits.<br><span>I'm Samir.</span></h1>
+
+<p>
+Welcome to my digital space. I am an enthusiastic learner
+with an interest in technology, education, creativity and
+personal development. This platform represents my journey,
+my ambitions and the person I am working to become.
+</p>
+
+<div class="hero-actions">
+<button class="btn" onclick="navigate('intro')">
+EXPLORE MY WORLD →
+</button>
+<button class="btn secondary" onclick="navigate('contact')">
+GET IN TOUCH
+</button>
+</div>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="number">01</div>
+<h3>My Identity</h3>
+<p>Discover my background, personality and personal vision.</p>
+</div>
+
+<div class="card">
+<div class="number">02</div>
+<h3>My Education</h3>
+<p>Explore my academic journey and qualifications.</p>
+</div>
+
+<div class="card">
+<div class="number">03</div>
+<h3>My Capabilities</h3>
+<p>Technology, creativity, skills and continuous learning.</p>
+</div>
+
+</div>
+
+<div class="info-card">
+<h3>PERSONAL PHILOSOPHY</h3>
+<p class="quote">
+"Your future is created by what you do today, not tomorrow."
+</p>
+</div>
+
+<div class="terminal">
+<div class="white">SYSTEM TERMINAL — PROFILE INFORMATION</div>
+&gt; Initializing personal profile... <span class="green">OK</span><br>
+&gt; Identity: SAMIR GANIE<br>
+&gt; Interface: ONLINE<br>
+&gt; Privacy notice: <span class="green">ACTIVE</span><br>
+&gt; Welcome to my digital world.
+</div>
+
+</section>
+
+<!-- INTRODUCTION -->
+
+<section class="section" id="intro">
+
+<div class="eyebrow">01 / INTRODUCTION</div>
+<h2 class="heading">The Person Behind The Profile.</h2>
+<p class="description">
+Every journey begins with curiosity. Here is a little about mine.
+</p>
+
+<div class="info-card">
+<h3>WHO AM I?</h3>
+<p>
+My name is Samir Ganie. I am a curious and ambitious individual
+from Kashmir, India, with an interest in technology, education,
+psychology and digital innovation.
+
+I enjoy learning new things, exploring creative ideas and
+developing practical skills. I believe that knowledge becomes
+valuable when we apply it in real life.
+</p>
+</div>
+
+<div class="info-card">
+<h3>MY MINDSET</h3>
+<p>
+I believe in continuous improvement, independent thinking,
+discipline and patience. I am always looking for opportunities
+to learn, challenge myself and build something meaningful.
+</p>
+</div>
+
+<div class="info-card">
+<h3>MY AMBITION</h3>
+<p>
+My ambition is to create a successful future through education,
+technology, practical experience and consistent effort.
+I want to turn my ideas into real projects and meaningful work.
+</p>
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+  <div class="eyebrow">02 / PERSONAL PROFILE</div>
+
+  <h2 class="heading">More Than Just A Profile.</h2>
+
+  <p class="description">
+    Get to know my personality, interests, mindset and the goals
+    that motivate me to keep moving forward.
+  </p>
+
+  <!-- INTRODUCTION -->
+
+  <div class="info-card">
+    <h3>WHO I AM</h3>
+    <p>
+      My name is Samir Ganie, and I am from Kashmir, India.
+      I am a curious, self-motivated and ambitious individual
+      who believes that learning is a lifelong journey.
+
+      I enjoy exploring new ideas, understanding different
+      perspectives and developing skills that can help me
+      grow both personally and professionally.
+
+      I believe that a person's identity is not defined only
+      by their qualifications, but also by their thoughts,
+      actions, values and willingness to improve.
+    </p>
+  </div>
+
+  <!-- INTERESTS -->
+
+  <div class="eyebrow">MY AREAS OF INTEREST</div>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="number">01</div>
+      <h3>Technology & Innovation</h3>
+      <p>
+        I have a strong interest in technology and the digital
+        world. I enjoy exploring web development, programming
+        and new digital tools. I like understanding how websites
+        and applications work and how technology can solve
+        everyday problems.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="number">02</div>
+      <h3>Psychology & Human Behaviour</h3>
+      <p>
+        I am interested in understanding how people think,
+        feel and behave. Psychology helps me explore human
+        emotions, decision-making, personality and relationships.
+        I believe understanding people is an important part
+        of understanding life.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="number">03</div>
+      <h3>Education & Knowledge</h3>
+      <p>
+        I believe education is more than passing examinations.
+        It is about developing knowledge, awareness and the
+        ability to think independently. I enjoy learning
+        different subjects and sharing useful educational
+        resources with others.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- MINDSET -->
+
+  <div class="info-card">
+    <h3>MY MINDSET & WAY OF THINKING</h3>
+    <p>
+      I believe that success requires patience, consistency
+      and continuous effort. I prefer understanding things
+      rather than simply memorising them.
+
+      I try to look at situations from different perspectives,
+      learn from mistakes and find practical solutions to
+      problems. I understand that growth takes time, and
+      every experience can teach us something valuable.
+    </p>
+  </div>
+
+  <!-- PERSONALITY -->
+
+  <div class="info-card">
+    <h3>MY PERSONALITY</h3>
+    <p>
+      I consider myself a learner who is always interested
+      in discovering something new. I value meaningful
+      conversations, independent thinking and constructive
+      ideas.
+
+      I respect different opinions and believe that listening
+      and understanding are just as important as expressing
+      our own thoughts. I also believe in staying humble,
+      being responsible and treating people with respect.
+    </p>
+  </div>
+
+  <!-- GOALS -->
+
+  <div class="info-card">
+    <h3>MY VISION & FUTURE GOALS</h3>
+    <p>
+      My goal is to build a meaningful future through education,
+      technology and practical experience.
+
+      I want to continue improving my technical and personal
+      skills, work on useful digital projects and explore
+      opportunities where I can apply my knowledge.
+
+      I also want to create something valuable that can make
+      learning and information more accessible to people.
+      For me, progress means becoming better than I was
+      yesterday.
+    </p>
+  </div>
+
+  <!-- VALUES -->
+
+  <div class="info-card">
+    <h3>VALUES THAT DEFINE ME</h3>
+
+    <span class="tag">Honesty</span>
+    <span class="tag">Discipline</span>
+    <span class="tag">Respect</span>
+    <span class="tag">Curiosity</span>
+    <span class="tag">Consistency</span>
+    <span class="tag">Responsibility</span>
+    <span class="tag">Independent Thinking</span>
+    <span class="tag">Continuous Learning</span>
+    <span class="tag">Self Improvement</span>
+  </div>
+
+  <!-- PERSONAL QUOTE -->
+
+  <div class="info-card">
+    <h3>A THOUGHT I BELIEVE IN</h3>
+    <p class="quote">
+      "Never stop learning, because life never stops teaching."
+    </p>
+  </div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section class="section" id="education">
+
+<div class="eyebrow">03 / ACADEMIC JOURNEY</div>
+<h2 class="heading">Education & Qualifications</h2>
+<p class="description">
+My educational background and ongoing academic journey.
+</p>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>Higher Secondary Education – Class 12</h3>
+<p>
+Government Higher Secondary School, Shangus<br>
+JKBOSE | 2024<br>
+Stream: Arts
+</p>
+</div>
+
+<div class="timeline-item">
+<h3>Bachelor of Arts (BA)</h3>
+<p>
+Indira Gandhi National Open University (IGNOU)<br>
+Currently pursuing undergraduate studies.
+</p>
+</div>
+
+</div>
+
+<div class="info-card">
+<h3>AREAS OF INTEREST</h3>
+<span class="tag">Psychology</span>
+<span class="tag">Education</span>
+<span class="tag">Communication</span>
+<span class="tag">Technology</span>
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section class="section" id="skills">
+
+<div class="eyebrow">04 / CAPABILITIES</div>
+<h2 class="heading">Skills & Abilities</h2>
+<p class="description">
+Technologies and abilities I have explored and developed.
+</p>
+
+<div class="info-card">
+<h3>TECHNICAL SKILLS</h3>
+<span class="tag">HTML</span>
+<span class="tag">CSS</span>
+<span class="tag">JavaScript</span>
+<span class="tag">Python</span>
+<span class="tag">Microsoft Word</span>
+<span class="tag">Excel</span>
+<span class="tag">PowerPoint</span>
+<span class="tag">MS Access</span>
+<span class="tag">Tally</span>
+</div>
+
+<div class="info-card">
+<h3>PERSONAL SKILLS</h3>
+<span class="tag">Critical Thinking</span>
+<span class="tag">Problem Solving</span>
+<span class="tag">Management</span>
+<span class="tag">Communication</span>
+<span class="tag">Negotiation</span>
+<span class="tag">Adaptability</span>
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section class="section projects-section" id="projects">
+
+  <div class="eyebrow">05 / MY DIGITAL WORK</div>
+
+  <h2 class="heading">Ideas Into Reality.</h2>
+
+  <p class="description">
+    A collection of my digital initiatives, personal projects
+    and ideas created with purpose.
+  </p>
+
+  <!-- KNOWLEDGEKART -->
+
+  <div class="project-card featured-project">
+
+    <div class="project-top">
+      <span class="project-number">PROJECT 01</span>
+      <span class="project-status">● LIVE PLATFORM</span>
+    </div>
+
+    <div class="project-content">
+
+      <div class="project-symbol">K</div>
+
+      <h3>KnowledgeKart</h3>
+
+      <span class="project-category">
+        EDUCATION & LEARNING PLATFORM
+      </span>
+
+      <p>
+        KnowledgeKart is an educational initiative built with
+        one simple purpose: making quality learning resources
+        accessible to everyone.
+
+        It aims to help students find useful study materials,
+        notes, PDFs and educational resources without making
+        education a financial burden.
+
+        The platform focuses on providing free resources and
+        affordable learning materials, especially for students
+        who may not be able to spend much on their studies.
+
+        Because learning should never be limited by someone's
+        financial situation.
+      </p>
+
+      <div class="project-tags">
+        <span>Free Resources</span>
+        <span>Affordable Learning</span>
+        <span>Student Support</span>
+        <span>Education</span>
+      </div>
+
+      <div class="project-motto">
+        "Everyone deserves access to good, free knowledge."
+      </div>
+
+      <a href="https://knowledgekart.pages.dev/"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="project-btn">
+        EXPLORE KNOWLEDGEKART <span>↗</span>
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- PERSONAL PORTFOLIO -->
+
+  <div class="project-card portfolio-project">
+
+    <div class="project-top">
+      <span class="project-number">PROJECT 02</span>
+      <span class="project-status">● PERSONAL PROJECT</span>
+    </div>
+
+    <div class="project-content">
+
+      <div class="project-symbol portfolio-symbol">SG</div>
+
+      <h3>Samir — Digital Identity</h3>
+
+      <span class="project-category">
+        PERSONAL PORTFOLIO & DIGITAL PRESENCE
+      </span>
+
+      <p>
+        This website is my personal digital space, created to
+        introduce myself beyond a name or a photograph.
+
+        It represents my educational journey, interests,
+        personality, skills, ambitions and the things I am
+        working towards.
+
+        It also reflects my passion for learning, creativity
+        and personal development. Through this platform,
+        I want people to understand who I am, what I believe
+        in and what I hope to achieve in the future.
+
+        More than just a portfolio, it is a reflection of
+        my journey and the person I am becoming.
+      </p>
+
+      <div class="project-tags">
+        <span>Personal Identity</span>
+        <span>My Journey</span>
+        <span>Creativity</span>
+        <span>Personal Growth</span>
+      </div>
+
+      <div class="project-motto">
+        "A journey of learning, building and becoming better."
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FUTURE VISION -->
+
+  <div class="project-vision">
+
+    <span class="eyebrow">LOOKING AHEAD</span>
+
+    <h3>More Ideas. More Possibilities.</h3>
+
+    <p>
+      Every meaningful project starts with an idea.
+      I believe in building things that solve problems,
+      create opportunities and make a positive difference.
+      This journey is just getting started.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section id="contact" class="section contact-section">
+  <div class="contact-container">
+
+    <div class="contact-heading">
+      <span class="contact-tag">// ESTABLISH CONNECTION</span>
+      <h2>Get In <span>Touch.</span></h2>
+      <p>
+        Have a project, an idea, or an opportunity?
+        Feel free to contact me.
+      </p>
+    </div>
+
+    <div class="contact-cards">
+
+      <!-- Email -->
+      <a href="mailto:ganiesamir147@gmail.com"
+         class="contact-card email-card">
+
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.7"
+               stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="5" width="18" height="14" rx="2"/>
+            <path d="m3 7 9 6 9-6"/>
+          </svg>
+        </div>
+
+        <div class="contact-info">
+          <span class="contact-label">EMAIL ADDRESS</span>
+          <h3>Email Me</h3>
+         
+        </div>
+
+        <span class="contact-arrow">↗</span>
+      </a>
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/916006372205"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="contact-card whatsapp-card">
+
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.52 3.48A11.8 11.8 0 0 0 12.1 0C5.56 0 .24 5.32.24 11.86c0 2.09.55 4.13 1.6 5.93L.14 24l6.36-1.67a11.84 11.84 0 0 0 5.6 1.42h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.24-6.15-3.45-8.41ZM12.1 21.74a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.77.99 1.01-3.68-.23-.38a9.83 9.83 0 0 1-1.51-5.22c0-5.46 4.44-9.9 9.91-9.9a9.84 9.84 0 0 1 7.01 2.9 9.84 9.84 0 0 1 2.9 7.01c0 5.46-4.45 9.87-9.92 9.87Zm5.44-7.4c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.46-.89-.79-1.48-1.77-1.65-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35Z"/>
+          </svg>
+        </div>
+
+        <div class="contact-info">
+          <span class="contact-label">DIRECT MESSAGE</span>
+          <h3>WhatsApp</h3>
+
+        </div>
+
+        <span class="contact-arrow">↗</span>
+      </a>
+
+    </div>
+
+    <div class="contact-footer">
+      <span class="status-dot"></span>
+      Available for opportunities
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="footer">
+  <span class="footer-title">SAMIR<span>.</span></span>
+  <p>CURIOUS MIND. LIMITLESS JOURNEY.</p>
+  <p>BUILT WITH PURPOSE • DRIVEN BY CURIOSITY</p>
+  <p>DESIGNED & DEVELOPED BY SAMIR GANIE</p>
+  <small>© 2026 SAMIR GANIE — KEEP LEARNING. KEEP GROWING.</small>
+</footer>
+
+</main>
+
+<script>
+
+// SECURITY POPUP
+
+function enterSite(){
+document.getElementById("security").style.display="none";
+}
+
+// LIVE CLOCK
+
+function updateClock(){
+const now=new Date();
+
+document.getElementById("clock").textContent=
+now.toLocaleDateString("en-IN",{
+day:"2-digit",
+month:"short",
+year:"numeric"
+})+" | "+now.toLocaleTimeString("en-IN");
+}
+
+updateClock();
+setInterval(updateClock,1000);
+
+// PAGE TITLES
+
+const titles={
+home:"Overview",
+intro:"Introduction",
+about:"About Me",
+education:"Education",
+skills:"Skills & Abilities",
+projects:"My Projects",
+contact:"Contact Me"
+};
+
+// NAVIGATION
+
+function showSection(id,button){
+
+document.querySelectorAll(".section").forEach(section=>{
+section.classList.remove("active");
+});
+
+document.getElementById(id).classList.add("active");
+
+document.querySelectorAll(".nav button").forEach(btn=>{
+btn.classList.remove("active");
+});
+
+if(button)button.classList.add("active");
+
+document.getElementById("pageTitle").textContent=titles[id];
+
+closeMenu();
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+}
+
+function navigate(id){
+
+    const ids=[
+        "home","intro","about","education",
+        "skills","projects","contact"
+    ];
+
+    const buttons=document.querySelectorAll(".nav button");
+
+    const index=ids.indexOf(id);
+
+    if(index!==-1){
+        showSection(id,buttons[index]);
+    }
+
+}
+
+// MOBILE SIDEBAR
+
+function toggleMenu(){
+
+    document.getElementById("sidebar").classList.toggle("open");
+
+    document.getElementById("overlay").classList.toggle("show");
+
+}
+
+function closeMenu(){
+
+    document.getElementById("sidebar").classList.remove("open");
+
+    document.getElementById("overlay").classList.remove("show");
+
+}
+
+</script>
+<script>
+window.addEventListener("load", function () {
+  window.scrollTo(0, 0);
+});
+</script>
+</body>
+</html>
