@@ -1,1 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://samir04mx.pages.dev/sitemap.xml
 
